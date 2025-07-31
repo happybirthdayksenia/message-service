@@ -98,6 +98,8 @@ Your service will be available at the URL provided by Render.com. You can test i
 4. **Maven Wrapper Issues**:
    - If you see errors about missing `.mvn` directory or `mvnw` files, ensure these files are committed to your repository
    - The Maven wrapper files are required for the Docker build to work properly
+   - If you see "Could not find or load main class org.apache.maven.wrapper.MavenWrapperMain", ensure the Maven wrapper was generated using `mvn wrapper:wrapper` command
+   - The Maven wrapper should use the public Maven Central repository (not private Artifactory repositories)
 
 ### Logs
 
