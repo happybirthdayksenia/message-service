@@ -88,11 +88,16 @@ Your service will be available at the URL provided by Render.com. You can test i
    - Check the build logs in Render.com
    - Ensure your Dockerfile is in the root directory
    - Verify all required files are present
+   - Make sure the Maven wrapper files (`.mvn/`, `mvnw`, `mvnw.cmd`) are included in your repository
 
 3. **Application Won't Start**:
    - Check the application logs in Render.com
    - Verify all environment variables are set correctly
    - Ensure the port configuration is correct
+
+4. **Maven Wrapper Issues**:
+   - If you see errors about missing `.mvn` directory or `mvnw` files, ensure these files are committed to your repository
+   - The Maven wrapper files are required for the Docker build to work properly
 
 ### Logs
 

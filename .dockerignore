@@ -4,6 +4,11 @@ target/
 !target/classes/
 !target/maven-archiver/
 
+# Keep Maven wrapper files
+!.mvn/
+!mvnw
+!mvnw.cmd
+
 # IDE
 .idea/
 *.iml
