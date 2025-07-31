@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://dpg-d24ptvqdbo4c73a0ef10-a.frankfurt-postgres.render.com/moomin_plus_plus_database
-    username: moomin_plus_plus_database_user
-    password: lHwDxVOlEQUSXG87Qnquoewmb7aGI1NF
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/message_service}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:password}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -16,7 +16,7 @@ spring:
     name: message-service
 
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 logging:
   level:
