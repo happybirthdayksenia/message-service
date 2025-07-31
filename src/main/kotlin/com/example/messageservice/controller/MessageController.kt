@@ -1,5 +1,6 @@
 package com.example.messageservice.controller
 
+import com.example.messageservice.dto.CreateBirthdayMessageRequest
 import com.example.messageservice.dto.CreateMessageRequest
 import com.example.messageservice.dto.MessageResponse
 import com.example.messageservice.service.MessageService
@@ -17,6 +18,18 @@ class MessageController(private val messageService: MessageService) {
     @PostMapping
     fun createMessage(@Valid @RequestBody request: CreateMessageRequest): ResponseEntity<MessageResponse> {
         val message = messageService.createMessage(request)
+        return ResponseEntity.status(HttpStatus.CREATED).body(message)
+    }
+
+    @PostMapping("/birthday")
+    fun createBirthdayMessage(@Valid @RequestBody request: CreateBirthdayMessageRequest): ResponseEntity<MessageResponse> {
+        val message = messageService.createBirthdayMessage(request)
+        return ResponseEntity.status(HttpStatus.CREATED).body(message)
+    }
+
+    @PostMapping("/live")
+    fun createBirthdayMessage(@Valid @RequestBody request: CreateMessageRequest): ResponseEntity<MessageResponse> {
+        val message = messageService.createLiveMessage(request)
         return ResponseEntity.status(HttpStatus.CREATED).body(message)
     }
     

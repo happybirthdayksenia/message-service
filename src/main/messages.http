@@ -1,0 +1,164 @@
+###
+POST http://localhost:8080/api/messages/live
+Content-Type: application/json
+
+{"sender":"Moomin","content":"Good moomin!"}
+
+###
+DELETE http://localhost:8080/api/messages/68
+
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Buddy Bear","content":"Happy Birthday! Wishing you a day full of laughter, love, and cake!","timestamp":"2025-08-02T00:00:01"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Mr Cat","content":"Have a fantastic birthday filled with sunshine, smiles, and all your favorite things.","timestamp":"2025-08-02T00:00:06"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Duck","content":"Another year older, wiser, and more amazing! Have a great one!","timestamp":"2025-08-02T00:00:11"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Orangino","content":"Wishing you a birthday as awesome as you are!","timestamp":"2025-08-02T00:00:16"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Moomin","content":"Cheers to you and your special day! May it be unforgettable!","timestamp":"2025-08-02T00:00:20"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Lolo & Pepe","content":"You bring so much joy into the world! May your birthday return it tenfold!","timestamp":"2025-08-02T00:00:25"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Brilevsky","content":"I hope today surrounds you with love, warmth, and all the happiness you deserve.","timestamp":"2025-08-02T00:00:30"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Utya","content":"Watching you grow and shine is a gift! Happy birthday to someone truly special.","timestamp":"2025-08-02T00:00:36"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Skull","content":"You're not just a year older, you're a year better. Happy Birthday!","timestamp":"2025-08-02T00:00:41"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Salchicha Dog","content":"Sending love and hugs your way today. May your heart be full and your smile wide!","timestamp":"2025-08-02T00:00:46"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Prometheus","content":"Happy Birthday! You're not old… you're just well-seasoned!","timestamp":"2025-08-02T00:00:52"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Concerned Froge","content":"Congrats on being born! Good call.","timestamp":"2025-08-02T00:00:57"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Grab this Crab","content":"Don't think of it as getting older! Think of it as becoming a classic.","timestamp":"2025-08-02T00:01:01"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Krtek","content":"Another trip around the sun and still no sign of maturity. Keep up the great work!","timestamp":"2025-08-02T00:01:06"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Shaitan Chick","content":"Birthdays are nature's way of telling us to eat more cake! Don't fight it.","timestamp":"2025-08-02T00:01:11"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Croco","content":"Wishing you a year of success, growth, and joy. Happy Birthday!","timestamp":"2025-08-02T00:01:17"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Cup Puchino","content":"May your birthday mark the beginning of a prosperous year ahead.","timestamp":"2025-08-02T00:01:22"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Shiba Inu","content":"Happy Birthday! Your hard work and positivity inspire us all.","timestamp":"2025-08-02T00:01:26"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Mia Bunny","content":"Here's to another year of excellence and achievement. Enjoy your day!","timestamp":"2025-08-02T00:01:31"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Jam","content":"Wishing you continued success and happiness on your special day.","timestamp":"2025-08-02T00:01:36"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Bob tye Jellyfish","content":"Happy B-day!","timestamp":"2025-08-02T00:01:42"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Din the Dino","content":"Have a brilliant day!","timestamp":"2025-08-02T00:01:44"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Orangoutang","content":"So glad you were born!","timestamp":"2025-08-02T00:01:46"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Racoon","content":"Enjoy every moment today!","timestamp":"2025-08-02T00:01:48"}
+
+###
+POST http://localhost:8080/api/messages/birthday
+Content-Type: application/json
+
+{"sender":"Pool Flamingo","content":"HBD! Make a wish!","timestamp":"2025-08-02T00:01:50 "}
+
+
+
+
+

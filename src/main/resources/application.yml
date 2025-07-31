@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: postgresql://moomin_plus_plus_database_user:lHwDxVOlEQUSXG87Qnquoewmb7aGI1NF@dpg-d24ptvqdbo4c73a0ef10-a.frankfurt-postgres.render.com/moomin_plus_plus_database
+    url: jdbc:postgresql://dpg-d24ptvqdbo4c73a0ef10-a.frankfurt-postgres.render.com/moomin_plus_plus_database
     username: moomin_plus_plus_database_user
     password: lHwDxVOlEQUSXG87Qnquoewmb7aGI1NF
     driver-class-name: org.postgresql.Driver

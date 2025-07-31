@@ -1,6 +1,7 @@
 package com.example.messageservice.repository
 
 import com.example.messageservice.entity.Message
+import org.springframework.data.domain.Sort
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.query.Param
@@ -21,4 +22,9 @@ interface MessageRepository : JpaRepository<Message, Long> {
     fun findByContentContainingOrderByTimestampDesc(@Param("keyword") keyword: String): List<Message>
     
     fun findTop10ByOrderByTimestampDesc(): List<Message>
+    fun findByTimestampBetweenOrderByTimestampAsc(
+        timestampAfter: LocalDateTime,
+        timestampBefore: LocalDateTime,
+        sort: Sort
+    ): MutableList<Message>
 } 

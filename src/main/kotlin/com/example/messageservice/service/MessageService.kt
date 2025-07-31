@@ -1,9 +1,11 @@
 package com.example.messageservice.service
 
+import com.example.messageservice.dto.CreateBirthdayMessageRequest
 import com.example.messageservice.dto.CreateMessageRequest
 import com.example.messageservice.dto.MessageResponse
 import com.example.messageservice.entity.Message
 import com.example.messageservice.repository.MessageRepository
+import org.springframework.data.domain.Sort
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import java.time.LocalDateTime
@@ -20,10 +22,30 @@ class MessageService(private val messageRepository: MessageRepository) {
         val savedMessage = messageRepository.save(message)
         return MessageResponse.fromEntity(savedMessage)
     }
+
+    fun createBirthdayMessage(request: CreateBirthdayMessageRequest): MessageResponse {
+        val message = Message(
+            sender = request.sender,
+            content = request.content,
+            timestamp = request.timestamp
+        )
+        val savedMessage = messageRepository.save(message)
+        return MessageResponse.fromEntity(savedMessage)
+    }
+
+    fun createLiveMessage(request: CreateMessageRequest): MessageResponse {
+        val message = Message(
+            sender = request.sender,
+            content = request.content,
+            timestamp = LocalDateTime.now().plusHours(5)
+        )
+        val savedMessage = messageRepository.save(message)
+        return MessageResponse.fromEntity(savedMessage)
+    }
     
     @Transactional(readOnly = true)
     fun getAllMessages(): List<MessageResponse> {
-        return messageRepository.findTop10ByOrderByTimestampDesc()
+        return messageRepository.findByTimestampBetweenOrderByTimestampAsc(LocalDateTime.now().minusDays(365), LocalDateTime.now(), Sort.by(Sort.Order.asc("timestamp")))
             .map { MessageResponse.fromEntity(it) }
     }
     
