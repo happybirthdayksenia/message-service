@@ -12,8 +12,14 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
+        # Configure timezone to UTC
+        jdbc:
+          time_zone: UTC
   application:
     name: message-service
+  # Set default timezone to UTC
+  jackson:
+    time-zone: UTC
 
 server:
   port: ${PORT:8080}

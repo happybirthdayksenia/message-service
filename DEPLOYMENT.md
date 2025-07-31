@@ -110,4 +110,23 @@ You can view application logs in the Render.com dashboard under your service's "
 - Never commit sensitive credentials to your repository
 - Use Render.com's environment variable system for all secrets
 - Consider using Render.com's managed PostgreSQL service for better security
-- Regularly rotate your database passwords 
+- Regularly rotate your database passwords
+
+## Timezone Configuration
+
+The application is configured to use **UTC timezone** for all timestamps:
+
+- **Database timestamps**: Stored in UTC
+- **API responses**: Returned in UTC
+- **Jackson serialization**: Configured to use UTC
+
+This ensures consistent timestamp handling across different deployment environments and timezones.
+
+## Message Format
+
+The application uses a consistent message format:
+
+- **Standard messages**: All messages use the same format with UTC timestamps
+- **Bulk messages**: Support for creating multiple messages with custom timestamps
+- **UTC timestamps**: All timestamps are stored and returned in UTC timezone
+- **Flexible creation**: Single messages get automatic timestamps, bulk messages allow custom timestamps 

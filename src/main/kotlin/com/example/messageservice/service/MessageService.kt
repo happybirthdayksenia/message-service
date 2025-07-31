@@ -1,7 +1,7 @@
 package com.example.messageservice.service
 
-import com.example.messageservice.dto.CreateBirthdayMessageRequest
 import com.example.messageservice.dto.CreateMessageRequest
+import com.example.messageservice.dto.CreateBulkMessageRequest
 import com.example.messageservice.dto.MessageResponse
 import com.example.messageservice.entity.Message
 import com.example.messageservice.repository.MessageRepository
@@ -9,6 +9,7 @@ import org.springframework.data.domain.Sort
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import java.time.LocalDateTime
+import java.time.ZoneOffset
 
 @Service
 @Transactional
@@ -22,30 +23,22 @@ class MessageService(private val messageRepository: MessageRepository) {
         val savedMessage = messageRepository.save(message)
         return MessageResponse.fromEntity(savedMessage)
     }
-
-    fun createBirthdayMessage(request: CreateBirthdayMessageRequest): MessageResponse {
-        val message = Message(
-            sender = request.sender,
-            content = request.content,
-            timestamp = request.timestamp
-        )
-        val savedMessage = messageRepository.save(message)
-        return MessageResponse.fromEntity(savedMessage)
-    }
-
-    fun createLiveMessage(request: CreateMessageRequest): MessageResponse {
-        val message = Message(
-            sender = request.sender,
-            content = request.content,
-            timestamp = LocalDateTime.now().plusHours(7)
-        )
-        val savedMessage = messageRepository.save(message)
-        return MessageResponse.fromEntity(savedMessage)
+    
+    fun createBulkMessages(request: CreateBulkMessageRequest): List<MessageResponse> {
+        val messages = request.messages.map { item ->
+            Message(
+                sender = item.sender,
+                content = item.content,
+                timestamp = item.timestamp
+            )
+        }
+        val savedMessages = messageRepository.saveAll(messages)
+        return savedMessages.map { MessageResponse.fromEntity(it) }
     }
     
     @Transactional(readOnly = true)
     fun getAllMessages(): List<MessageResponse> {
-        return messageRepository.findByTimestampBetweenOrderByTimestampAsc(LocalDateTime.now().minusDays(365), LocalDateTime.now(), Sort.by(Sort.Order.asc("timestamp")))
+        return messageRepository.findByTimestampBetweenOrderByTimestampAsc(LocalDateTime.now(ZoneOffset.UTC).minusDays(365), LocalDateTime.now(ZoneOffset.UTC), Sort.by(Sort.Order.asc("timestamp")))
             .map { MessageResponse.fromEntity(it) }
     }
     
@@ -87,5 +80,11 @@ class MessageService(private val messageRepository: MessageRepository) {
         } else {
             false
         }
+    }
+    
+    fun deleteAllMessages(): Long {
+        val count = messageRepository.count()
+        messageRepository.deleteAll()
+        return count
     }
 } 

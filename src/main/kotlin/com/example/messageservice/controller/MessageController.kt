@@ -1,7 +1,7 @@
 package com.example.messageservice.controller
 
-import com.example.messageservice.dto.CreateBirthdayMessageRequest
 import com.example.messageservice.dto.CreateMessageRequest
+import com.example.messageservice.dto.CreateBulkMessageRequest
 import com.example.messageservice.dto.MessageResponse
 import com.example.messageservice.service.MessageService
 import jakarta.validation.Valid
@@ -21,16 +21,10 @@ class MessageController(private val messageService: MessageService) {
         return ResponseEntity.status(HttpStatus.CREATED).body(message)
     }
 
-    @PostMapping("/birthday")
-    fun createBirthdayMessage(@Valid @RequestBody request: CreateBirthdayMessageRequest): ResponseEntity<MessageResponse> {
-        val message = messageService.createBirthdayMessage(request)
-        return ResponseEntity.status(HttpStatus.CREATED).body(message)
-    }
-
-    @PostMapping("/live")
-    fun createBirthdayMessage(@Valid @RequestBody request: CreateMessageRequest): ResponseEntity<MessageResponse> {
-        val message = messageService.createLiveMessage(request)
-        return ResponseEntity.status(HttpStatus.CREATED).body(message)
+    @PostMapping("/bulk")
+    fun createBulkMessages(@Valid @RequestBody request: CreateBulkMessageRequest): ResponseEntity<List<MessageResponse>> {
+        val messages = messageService.createBulkMessages(request)
+        return ResponseEntity.status(HttpStatus.CREATED).body(messages)
     }
 
     @GetMapping("/all")
@@ -88,5 +82,15 @@ class MessageController(private val messageService: MessageService) {
         } else {
             ResponseEntity.notFound().build()
         }
+    }
+    
+    @DeleteMapping
+    fun deleteAllMessages(): ResponseEntity<Map<String, Any>> {
+        val deletedCount = messageService.deleteAllMessages()
+        val response = mapOf(
+            "message" to "All messages deleted successfully",
+            "deletedCount" to deletedCount
+        )
+        return ResponseEntity.ok(response)
     }
 } 
