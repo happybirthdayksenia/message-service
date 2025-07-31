@@ -50,6 +50,12 @@ class MessageService(private val messageRepository: MessageRepository) {
     }
     
     @Transactional(readOnly = true)
+    fun getReallyAllMessages(): List<MessageResponse> {
+        return messageRepository.findAll()
+            .map { MessageResponse.fromEntity(it) }
+    }
+
+    @Transactional(readOnly = true)
     fun getMessageById(id: Long): MessageResponse? {
         return messageRepository.findById(id)
             .map { MessageResponse.fromEntity(it) }

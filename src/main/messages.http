@@ -5,13 +5,13 @@ Content-Type: application/json
 {"sender":"Moomin","content":"Good moomin!"}
 
 ###
-DELETE https://message-service-lp4m.onrender.com/api/messages/69
+DELETE https://message-service-lp4m.onrender.com/api/messages/71
 
 ###
-GET https://message-service-lp4m.onrender.com/api/messages
+GET https://message-service-lp4m.onrender.com/api/messages/all
 
 ###
-GET https://message-service-lp4m.onrender.com/api/messages/69
+GET https://message-service-lp4m.onrender.com/api/messages/72
 
 ###
 POST http://localhost:8080/api/messages/birthday

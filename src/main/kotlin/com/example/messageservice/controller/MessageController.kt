@@ -32,7 +32,13 @@ class MessageController(private val messageService: MessageService) {
         val message = messageService.createLiveMessage(request)
         return ResponseEntity.status(HttpStatus.CREATED).body(message)
     }
-    
+
+    @GetMapping("/all")
+    fun getReallyAllMessages(): ResponseEntity<List<MessageResponse>> {
+        val messages = messageService.getReallyAllMessages()
+        return ResponseEntity.ok(messages)
+    }
+
     @GetMapping
     fun getAllMessages(): ResponseEntity<List<MessageResponse>> {
         val messages = messageService.getAllMessages()
