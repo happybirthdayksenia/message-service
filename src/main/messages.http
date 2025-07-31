@@ -5,7 +5,16 @@ Content-Type: application/json
 {"sender":"Moomin","content":"Good moomin!"}
 
 ###
-DELETE https://message-service-lp4m.onrender.com/api/messages/71
+POST https://message-service-lp4m.onrender.com/api/messages
+Content-Type: application/json
+
+{"sender":"Moomin","content":"Are you moomin?"}
+
+###
+DELETE https://message-service-lp4m.onrender.com/api/messages/72
+
+###
+GET https://message-service-lp4m.onrender.com/api/messages
 
 ###
 GET https://message-service-lp4m.onrender.com/api/messages/all
