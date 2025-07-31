@@ -37,7 +37,7 @@ class MessageService(private val messageRepository: MessageRepository) {
         val message = Message(
             sender = request.sender,
             content = request.content,
-            timestamp = LocalDateTime.now().plusHours(5)
+            timestamp = LocalDateTime.now().plusHours(7)
         )
         val savedMessage = messageRepository.save(message)
         return MessageResponse.fromEntity(savedMessage)

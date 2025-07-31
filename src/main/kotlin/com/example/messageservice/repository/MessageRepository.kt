@@ -21,7 +21,6 @@ interface MessageRepository : JpaRepository<Message, Long> {
     @Query("SELECT m FROM Message m WHERE m.content LIKE %:keyword% ORDER BY m.timestamp DESC")
     fun findByContentContainingOrderByTimestampDesc(@Param("keyword") keyword: String): List<Message>
     
-    fun findTop10ByOrderByTimestampDesc(): List<Message>
     fun findByTimestampBetweenOrderByTimestampAsc(
         timestampAfter: LocalDateTime,
         timestampBefore: LocalDateTime,

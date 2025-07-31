@@ -1,12 +1,17 @@
 ###
-POST http://localhost:8080/api/messages/live
+POST https://message-service-lp4m.onrender.com/api/messages/live
 Content-Type: application/json
 
 {"sender":"Moomin","content":"Good moomin!"}
 
 ###
-DELETE http://localhost:8080/api/messages/68
+DELETE https://message-service-lp4m.onrender.com/api/messages/69
 
+###
+GET https://message-service-lp4m.onrender.com/api/messages
+
+###
+GET https://message-service-lp4m.onrender.com/api/messages/69
 
 ###
 POST http://localhost:8080/api/messages/birthday
