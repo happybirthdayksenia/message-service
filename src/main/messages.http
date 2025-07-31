@@ -1,17 +1,20 @@
 ###
-POST https://message-service-lp4m.onrender.com/api/messages/live
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Moomin","content":"Good moomin!"}
+{"sender":"Moomin","content":"Good moomin!","timestamp":"2025-08-01T02:00:00Z"}
 
 ###
-POST https://message-service-lp4m.onrender.com/api/messages
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Moomin","content":"Are you moomin?"}
+{"sender":"Moomin","content":"How are you moomin?","timestamp":"2025-08-01T02:00:03Z"}
 
 ###
-DELETE https://message-service-lp4m.onrender.com/api/messages/72
+DELETE https://message-service-lp4m.onrender.com/api/messages/134
+
+### delete all
+DELETE https://message-service-lp4m.onrender.com/api/messages
 
 ###
 GET https://message-service-lp4m.onrender.com/api/messages
@@ -20,157 +23,157 @@ GET https://message-service-lp4m.onrender.com/api/messages
 GET https://message-service-lp4m.onrender.com/api/messages/all
 
 ###
-GET https://message-service-lp4m.onrender.com/api/messages/72
+GET https://message-service-lp4m.onrender.com/api/messages/133
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Buddy Bear","content":"Happy Birthday! Wishing you a day full of laughter, love, and cake!","timestamp":"2025-08-02T00:00:01"}
+{"sender":"Buddy Bear","content":"Happy Birthday! Wishing you a day full of laughter, love, and cake!","timestamp":"2025-08-01T19:00:01Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Mr Cat","content":"Have a fantastic birthday filled with sunshine, smiles, and all your favorite things.","timestamp":"2025-08-02T00:00:06"}
+{"sender":"Polar Owl","content":"Have a fantastic birthday filled with sunshine, smiles, and all your favorite things.","timestamp":"2025-08-01T19:00:06Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Duck","content":"Another year older, wiser, and more amazing! Have a great one!","timestamp":"2025-08-02T00:00:11"}
+{"sender":"Duck","content":"Another year older, wiser, and more amazing! Have a great one!","timestamp":"2025-08-01T19:00:11Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Orangino","content":"Wishing you a birthday as awesome as you are!","timestamp":"2025-08-02T00:00:16"}
+{"sender":"Orangino","content":"Wishing you a birthday as awesome as you are!","timestamp":"2025-08-01T19:00:16Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Moomin","content":"Cheers to you and your special day! May it be unforgettable!","timestamp":"2025-08-02T00:00:20"}
+{"sender":"Moomin","content":"Cheers to you and your special day! May it be unforgettable!","timestamp":"2025-08-01T19:00:20Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Lolo & Pepe","content":"You bring so much joy into the world! May your birthday return it tenfold!","timestamp":"2025-08-02T00:00:25"}
+{"sender":"Lolo & Pepe","content":"You bring so much joy into the world! May your birthday return it tenfold!","timestamp":"2025-08-01T19:00:25Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Brilevsky","content":"I hope today surrounds you with love, warmth, and all the happiness you deserve.","timestamp":"2025-08-02T00:00:30"}
+{"sender":"Brilevsky","content":"I hope today surrounds you with love, warmth, and all the happiness you deserve.","timestamp":"2025-08-01T19:00:30Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Utya","content":"Watching you grow and shine is a gift! Happy birthday to someone truly special.","timestamp":"2025-08-02T00:00:36"}
+{"sender":"Utya","content":"Watching you grow and shine is a gift! Happy birthday to someone truly special.","timestamp":"2025-08-01T19:00:36Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Skull","content":"You're not just a year older, you're a year better. Happy Birthday!","timestamp":"2025-08-02T00:00:41"}
+{"sender":"Skull","content":"You're not just a year older, you're a year better. Happy Birthday!","timestamp":"2025-08-01T19:00:41Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Salchicha Dog","content":"Sending love and hugs your way today. May your heart be full and your smile wide!","timestamp":"2025-08-02T00:00:46"}
+{"sender":"Salchicha Dog","content":"Sending love and hugs your way today. May your heart be full and your smile wide!","timestamp":"2025-08-01T19:00:46Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Prometheus","content":"Happy Birthday! You're not old… you're just well-seasoned!","timestamp":"2025-08-02T00:00:52"}
+{"sender":"Prometheus","content":"Happy Birthday! You're not old… you're just well-seasoned!","timestamp":"2025-08-01T19:00:52Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Concerned Froge","content":"Congrats on being born! Good call.","timestamp":"2025-08-02T00:00:57"}
+{"sender":"Concerned Froge","content":"Congrats on being born! Good call.","timestamp":"2025-08-01T19:00:57Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Grab this Crab","content":"Don't think of it as getting older! Think of it as becoming a classic.","timestamp":"2025-08-02T00:01:01"}
+{"sender":"Grab this Crab","content":"Don't think of it as getting older! Think of it as becoming a classic.","timestamp":"2025-08-01T19:01:01Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Krtek","content":"Another trip around the sun and still no sign of maturity. Keep up the great work!","timestamp":"2025-08-02T00:01:06"}
+{"sender":"Krtek","content":"Another trip around the sun and still no sign of maturity. Keep up the great work!","timestamp":"2025-08-01T19:01:06Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Shaitan Chick","content":"Birthdays are nature's way of telling us to eat more cake! Don't fight it.","timestamp":"2025-08-02T00:01:11"}
+{"sender":"Shaitan Chick","content":"Birthdays are nature's way of telling us to eat more cake! Don't fight it.","timestamp":"2025-08-01T19:01:11Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Croco","content":"Wishing you a year of success, growth, and joy. Happy Birthday!","timestamp":"2025-08-02T00:01:17"}
+{"sender":"Croco","content":"Wishing you a year of success, growth, and joy. Happy Birthday!","timestamp":"2025-08-01T19:01:19Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Cup Puchino","content":"May your birthday mark the beginning of a prosperous year ahead.","timestamp":"2025-08-02T00:01:22"}
+{"sender":"Cup Puchino","content":"May your birthday mark the beginning of a prosperous year ahead.","timestamp":"2025-08-01T19:01:22Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Shiba Inu","content":"Happy Birthday! Your hard work and positivity inspire us all.","timestamp":"2025-08-02T00:01:26"}
+{"sender":"Shiba Inu","content":"Happy Birthday! Your hard work and positivity inspire us all.","timestamp":"2025-08-01T19:01:26Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Mia Bunny","content":"Here's to another year of excellence and achievement. Enjoy your day!","timestamp":"2025-08-02T00:01:31"}
+{"sender":"Mia Bunny","content":"Here's to another year of excellence and achievement. Enjoy your day!","timestamp":"2025-08-01T19:01:31Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Jam","content":"Wishing you continued success and happiness on your special day.","timestamp":"2025-08-02T00:01:36"}
+{"sender":"Jam","content":"Wishing you continued success and happiness on your special day.","timestamp":"2025-08-01T19:01:36Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Bob tye Jellyfish","content":"Happy B-day!","timestamp":"2025-08-02T00:01:42"}
+{"sender":"Bob tye Jellyfish","content":"Happy B-day!","timestamp":"2025-08-01T19:01:42Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Din the Dino","content":"Have a brilliant day!","timestamp":"2025-08-02T00:01:44"}
+{"sender":"Din the Dino","content":"Have a brilliant day!","timestamp":"2025-08-01T19:01:44Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Orangoutang","content":"So glad you were born!","timestamp":"2025-08-02T00:01:46"}
+{"sender":"Orangoutang","content":"So glad you were born!","timestamp":"2025-08-01T19:01:46Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Racoon","content":"Enjoy every moment today!","timestamp":"2025-08-02T00:01:48"}
+{"sender":"Racoon","content":"Enjoy every moment today!","timestamp":"2025-08-01T19:01:48Z"}
 
 ###
-POST http://localhost:8080/api/messages/birthday
+POST http://localhost:8080/api/messages/timed
 Content-Type: application/json
 
-{"sender":"Pool Flamingo","content":"HBD! Make a wish!","timestamp":"2025-08-02T00:01:50 "}
+{"sender":"Pool Flamingo","content":"HBD! Make a wish!","timestamp":"2025-08-01T19:01:50Z "}
 
 
 

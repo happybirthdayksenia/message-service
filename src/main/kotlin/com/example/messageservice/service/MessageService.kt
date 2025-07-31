@@ -1,7 +1,7 @@
 package com.example.messageservice.service
 
 import com.example.messageservice.dto.CreateMessageRequest
-import com.example.messageservice.dto.CreateBulkMessageRequest
+import com.example.messageservice.dto.CreateTimedMessageRequest
 import com.example.messageservice.dto.MessageResponse
 import com.example.messageservice.entity.Message
 import com.example.messageservice.repository.MessageRepository
@@ -24,16 +24,15 @@ class MessageService(private val messageRepository: MessageRepository) {
         return MessageResponse.fromEntity(savedMessage)
     }
     
-    fun createBulkMessages(request: CreateBulkMessageRequest): List<MessageResponse> {
-        val messages = request.messages.map { item ->
+    fun createTimedMessages(request: CreateTimedMessageRequest): MessageResponse {
+        val message =
             Message(
-                sender = item.sender,
-                content = item.content,
-                timestamp = item.timestamp
+                sender = request.sender,
+                content = request.content,
+                timestamp = request.timestamp
             )
-        }
-        val savedMessages = messageRepository.saveAll(messages)
-        return savedMessages.map { MessageResponse.fromEntity(it) }
+        val savedMessage = messageRepository.save(message)
+        return MessageResponse.fromEntity(savedMessage)
     }
     
     @Transactional(readOnly = true)

@@ -1,7 +1,7 @@
 package com.example.messageservice.controller
 
 import com.example.messageservice.dto.CreateMessageRequest
-import com.example.messageservice.dto.CreateBulkMessageRequest
+import com.example.messageservice.dto.CreateTimedMessageRequest
 import com.example.messageservice.dto.MessageResponse
 import com.example.messageservice.service.MessageService
 import jakarta.validation.Valid
@@ -21,10 +21,10 @@ class MessageController(private val messageService: MessageService) {
         return ResponseEntity.status(HttpStatus.CREATED).body(message)
     }
 
-    @PostMapping("/bulk")
-    fun createBulkMessages(@Valid @RequestBody request: CreateBulkMessageRequest): ResponseEntity<List<MessageResponse>> {
-        val messages = messageService.createBulkMessages(request)
-        return ResponseEntity.status(HttpStatus.CREATED).body(messages)
+    @PostMapping("/timed")
+    fun createTimedMessages(@RequestBody request: CreateTimedMessageRequest): ResponseEntity<MessageResponse> {
+        val message = messageService.createTimedMessages(request)
+        return ResponseEntity.status(HttpStatus.CREATED).body(message)
     }
 
     @GetMapping("/all")
